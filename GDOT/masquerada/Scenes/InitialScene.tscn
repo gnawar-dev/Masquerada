@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://em7lbilx4jpv"]
+
+[ext_resource type="PackedScene" uid="uid://dwhk5cupv1l04" path="res://Prefabs/falling ball.tscn" id="1_hlugf"]
+
+[node name="Node" type="Node" unique_id=1007217378]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1499695663]
+transform = Transform3D(6.9878297, 0, 0, 0, 0.28706855, 0, 0, 0, 6.402526, 0, -0.058671117, 0)
+use_collision = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1503623628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1898616535]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9, 0)
+
+[node name="FallingBall" parent="." unique_id=335922406 instance=ExtResource("1_hlugf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -1)

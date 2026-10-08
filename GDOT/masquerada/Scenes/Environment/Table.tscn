@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dh2punqbal7og"]
+
+[ext_resource type="Material" uid="uid://82b8r6rq8vhi" path="res://Materials/TableMaterial/TableMaterial.tres" id="1_7oth3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7oth3"]
+
+[node name="Table" type="Node3D" unique_id=440625059]
+
+[node name="CSGTable" type="CSGBox3D" parent="." unique_id=1308069001]
+material_override = ExtResource("1_7oth3")
+size = Vector3(1.2, 1, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGTable" unique_id=769281480]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGTable/StaticBody3D" unique_id=1118379439]
+shape = SubResource("ConvexPolygonShape3D_7oth3")
+debug_color = Color(2.695322e-06, 0.5858738, 0.7765472, 0.41960785)

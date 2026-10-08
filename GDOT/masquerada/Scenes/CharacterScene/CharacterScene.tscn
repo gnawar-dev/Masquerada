@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://58bb0xcx5v0a"]
+
+[ext_resource type="PackedScene" uid="uid://uoxmlegoob5h" path="res://Character/Improved-Poly-low-human.blend" id="1_ct576"]
+
+[node name="CharacterScene" type="Node3D" unique_id=116678610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26584768, 0.46564162, -0.01958394)
+

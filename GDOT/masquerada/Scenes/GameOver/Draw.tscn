@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://craufg7pfv2rr"]
+
+[ext_resource type="FontFile" uid="uid://0ni8k168pg6u" path="res://Fonts/rogenz-demo/ROGENZ (DEMO).otf" id="1_5pd2e"]
+[ext_resource type="Script" uid="uid://dpovlj2ba5b8o" path="res://Scenes/GameOver/gameOver.gd" id="1_p4sun"]
+[ext_resource type="FontFile" uid="uid://cmkrwrvhg1q1" path="res://Fonts/xirod/Xirod.otf" id="2_p4sun"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0cu0"]
+bg_color = Color(0.23137255, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i26rj"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbv1d"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmef4"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jd40q"]
+bg_color = Color(0.6392157, 0.05490196, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl5fo"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egp45"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4sun"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Draw" type="Control" unique_id=366174089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p4sun")
+
+[node name="Label" type="Label" parent="." unique_id=1330652901]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = 32.0
+offset_right = -434.0
+offset_bottom = -448.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_5pd2e")
+theme_override_font_sizes/font_size = 121
+text = "Draw!"
+
+[node name="Play Again" type="Button" parent="." unique_id=15178916]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -59.999985
+offset_right = 240.0
+offset_bottom = 59.999985
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_p4sun")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_x0cu0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fbv1d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_nmef4")
+text = "Play Again"
+
+[node name="Quit to Main Menu" type="Button" parent="." unique_id=414694247]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.0
+offset_top = 133.0
+offset_right = 241.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_p4sun")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_jd40q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nl5fo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_egp45")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p4sun")
+text = "Quit to Main Menu"
+
+[connection signal="button_up" from="Play Again" to="." method="_on_play_again_button_up"]
+[connection signal="button_up" from="Quit to Main Menu" to="." method="_on_quit_to_main_menu_button_up"]

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cgkic3ryf3l48"]
+
+[ext_resource type="Script" uid="uid://1ndo0esqbwie" path="res://MaskAdjacent/mask_mesh.gd" id="1_4wg56"]
+[ext_resource type="Material" uid="uid://bpm8m8te0828" path="res://MaskAdjacent/MaskEffectMaterial.tres" id="1_sfe4k"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_4wg56"]
+material = ExtResource("1_sfe4k")
+size = Vector2(0.05, 0.1)
+
+[sub_resource type="Curve" id="Curve_sfe4k"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_4wg56"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_05cfd"]
+offsets = PackedFloat32Array(0.628, 1)
+colors = PackedColorArray(0.54, 0.54, 0.54, 1, 1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_6poj0"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_velio"]
+
+[node name="MaskMesh" type="Node3D" unique_id=1186650378]
+script = ExtResource("1_4wg56")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1524989241]
+transform = Transform3D(0.1, 0, 0, 0, -4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0)
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1696224595]
+lifetime = 7.0
+speed_scale = 4.44
+randomness = 0.8
+lifetime_randomness = 0.2
+fixed_fps = 30
+draw_order = 1
+mesh = SubResource("QuadMesh_4wg56")
+emission_shape = 3
+emission_box_extents = Vector3(0.1, 0.1, 0.03)
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 1.0
+angular_velocity_min = 1.0
+angular_velocity_max = 30.0
+angular_velocity_curve = SubResource("Curve_sfe4k")
+scale_amount_min = 0.2
+scale_amount_curve = SubResource("Curve_4wg56")
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("Gradient_05cfd")
+hue_variation_max = 0.01
+hue_variation_curve = SubResource("Curve_6poj0")
+
+[node name="MouseDetector" type="Area3D" parent="." unique_id=993937075]
+transform = Transform3D(0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MouseDetector" unique_id=233010990]
+shape = SubResource("BoxShape3D_velio")
+
+[connection signal="mouse_entered" from="MouseDetector" to="." method="MouseHoverIn"]
+[connection signal="mouse_exited" from="MouseDetector" to="." method="MouseHoverOut"]

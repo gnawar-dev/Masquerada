@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://byxi7x30sad8r"]
+
+[ext_resource type="Script" uid="uid://td3uj7xquwt1" path="res://Masks/Mutaconda/mutaconda.gd" id="1_d6ohw"]
+[ext_resource type="PackedScene" uid="uid://cgkic3ryf3l48" path="res://MaskAdjacent/MaskMesh.tscn" id="2_yuycr"]
+
+[node name="Mutaconda" type="Node" unique_id=566620520 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_d6ohw")
+mesh = NodePath("MaskMesh")
+Duration = 3
+AttackDescription = "Attack for 5 damage, dealing a bonus 2 damage on defense break."
+DefenseDescription = "heal for 20% of aborbed damage."
+metadata/_custom_type_script = "uid://byhq7eb0hj27m"
+
+[node name="MaskMesh" parent="." unique_id=1186650378 instance=ExtResource("2_yuycr")]
+mesh = "res://Masks/Mutaconda/Mesh.tres"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=790352448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.79658514)

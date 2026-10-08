@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://ce4g7yyqqpi24"]
+
+[ext_resource type="Script" uid="uid://cwn8w65xj4irt" path="res://MaskAdjacent/mask_details.gd" id="1_1ed8i"]
+[ext_resource type="FontFile" uid="uid://0ni8k168pg6u" path="res://Fonts/rogenz-demo/ROGENZ (DEMO).otf" id="2_xrm1b"]
+[ext_resource type="Texture2D" uid="uid://by6fi4v1qfceg" path="res://Art/MISC/Duration.png" id="3_s840q"]
+[ext_resource type="FontFile" uid="uid://cmkrwrvhg1q1" path="res://Fonts/xirod/Xirod.otf" id="4_ev548"]
+[ext_resource type="Texture2D" uid="uid://b8xwskfeijih6" path="res://Art/MISC/Lock.png" id="5_xrm1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s840q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev548"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6apn1"]
+bg_color = Color(0.6, 0.16799998, 0.16799998, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrm1b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s840q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uxcx"]
+bg_color = Color(0.6, 0.10200001, 0.10200001, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrm1b"]
+bg_color = Color(0.6, 0.25800002, 0.25800002, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhhwc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv7g5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpsik"]
+bg_color = Color(0.162, 0.6, 0.5634999, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhhwc"]
+bg_color = Color(0.264, 0.6, 0.49360004, 1)
+
+[node name="MaskDetails" type="Control" unique_id=1375178829]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ed8i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1806697503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.6
+anchor_right = 0.97
+anchor_bottom = 0.9
+
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer" unique_id=1051490004]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="NameLabel" type="RichTextLabel" parent="VBoxContainer/TopBar" unique_id=1502950540]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme_override_fonts/normal_font = ExtResource("2_xrm1b")
+theme_override_font_sizes/normal_font_size = 50
+text = "SAMPLE"
+vertical_alignment = 2
+
+[node name="Duration" type="HBoxContainer" parent="VBoxContainer/TopBar" unique_id=247762318]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="Instance" type="TextureRect" parent="VBoxContainer/TopBar/Duration" unique_id=1607472595]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_s840q")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Exit" type="Button" parent="VBoxContainer/TopBar" unique_id=2123137801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s840q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ev548")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6apn1")
+text = "X"
+
+[node name="ChoiceBar" type="HBoxContainer" parent="VBoxContainer" unique_id=399070138]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttackDescription" type="Button" parent="VBoxContainer/ChoiceBar" unique_id=202133091]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrm1b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s840q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4uxcx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xrm1b")
+
+[node name="Desc" type="RichTextLabel" parent="VBoxContainer/ChoiceBar/AttackDescription" unique_id=825785149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_ev548")
+theme_override_font_sizes/normal_font_size = 25
+text = "SAMPLE"
+
+[node name="Lock" type="TextureRect" parent="VBoxContainer/ChoiceBar/AttackDescription" unique_id=2141954455]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_xrm1b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DefenseDescription" type="Button" parent="VBoxContainer/ChoiceBar" unique_id=1407566816]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yhhwc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nv7g5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cpsik")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yhhwc")
+
+[node name="Desc" type="RichTextLabel" parent="VBoxContainer/ChoiceBar/DefenseDescription" unique_id=1598184382]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_ev548")
+theme_override_font_sizes/normal_font_size = 25
+text = "SAMPLE"
+
+[node name="Lock" type="TextureRect" parent="VBoxContainer/ChoiceBar/DefenseDescription" unique_id=2012587352]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_xrm1b")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="button_down" from="VBoxContainer/TopBar/Exit" to="." method="Exit"]
+[connection signal="button_down" from="VBoxContainer/ChoiceBar/AttackDescription" to="." method="AttackSelected"]
+[connection signal="button_down" from="VBoxContainer/ChoiceBar/DefenseDescription" to="." method="DefenseSelected"]

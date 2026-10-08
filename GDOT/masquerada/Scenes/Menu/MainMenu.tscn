@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://bt15c6e0i8vqa"]
+
+[ext_resource type="Script" uid="uid://8hdonx0mhv8j" path="res://Scenes/Menu/menu.gd" id="1_p4pvn"]
+[ext_resource type="FontFile" uid="uid://0ni8k168pg6u" path="res://Fonts/rogenz-demo/ROGENZ (DEMO).otf" id="2_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://ie4bre1vhmgn" path="res://Images/mask.png" id="2_qoqlk"]
+[ext_resource type="FontFile" uid="uid://cmkrwrvhg1q1" path="res://Fonts/xirod/Xirod.otf" id="3_qoqlk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.22959322, 0.22959325, 0.22959313, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i26rj"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwfq2"]
+bg_color = Color(0.64115655, 0.05347161, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35riq"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r1g0"]
+bg_color = Color(0.23137255, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoqlk"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="MainMenu" type="Control" unique_id=1507063598]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_p4pvn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=613369720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=17917288]
+modulate = Color(1, 1, 1, 0.27058825)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 144.0
+offset_top = -632.0
+offset_right = -519.0
+offset_bottom = 631.1521
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qoqlk")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=570463096]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.051000003
+anchor_right = 0.5
+anchor_bottom = 0.051000003
+offset_left = -282.0
+offset_top = 19.952
+offset_right = 290.0
+offset_bottom = 167.952
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 121
+text = "Masquerada"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="." unique_id=1276315852]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -60.0
+offset_right = 104.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qoqlk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i26rj")
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="." unique_id=447154883]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 150.0
+offset_right = 104.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qoqlk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwfq2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_35riq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h7a2f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_35riq")
+text = "QUIT"
+
+[node name="Credits" type="Button" parent="." unique_id=454201867]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -92.0
+offset_right = -16.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_qoqlk")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_7r1g0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qoqlk")
+text = "Credits
+"
+
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Credits" to="." method="credits_on_button_3_button_up"]
+[connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]

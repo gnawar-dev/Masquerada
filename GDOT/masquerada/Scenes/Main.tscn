@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://4yvio8v5rbda"]
+
+[ext_resource type="PackedScene" uid="uid://se0sttkqqqgb" path="res://Scenes/Environment/RoomScene.tscn" id="1_idj7w"]
+[ext_resource type="Script" uid="uid://b5ry0giwscvh3" path="res://Scenes/main.gd" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://dh2punqbal7og" path="res://Scenes/Environment/Table.tscn" id="2_kln2b"]
+[ext_resource type="Script" uid="uid://bbmruo4dsd1cl" path="res://Scenes/Environment/Table.gd" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://bt15c6e0i8vqa" path="res://Scenes/Menu/MainMenu.tscn" id="4_rgh2o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbw6q"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.20607775, 0.09733673, 0.019748168, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pbw6q"]
+material = SubResource("StandardMaterial3D_pbw6q")
+
+[node name="Main" type="Node3D" unique_id=1288310275]
+script = ExtResource("1_pbw6q")
+
+[node name="RoomScene" parent="." unique_id=289576570 instance=ExtResource("1_idj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0767019, 0)
+
+[node name="Table" parent="." unique_id=440625059 instance=ExtResource("2_kln2b")]
+script = ExtResource("3_kln2b")
+metadata/_edit_lock_ = true
+
+[node name="Side1" type="Node3D" parent="Table" unique_id=1072326467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
+
+[node name="Side2" type="Node3D" parent="Table" unique_id=1335169579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.5)
+
+[node name="Control" parent="." unique_id=1507063598 instance=ExtResource("4_rgh2o")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1737169925]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0.8911154, 1.5133355)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=915028150]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -0.6, 0, 1, -2.6226834e-08, 0, 1, 0)
+mesh = SubResource("PlaneMesh_pbw6q")
+
+[node name="AttackMaskHanger1" type="Node3D" parent="MeshInstance3D" unique_id=498698771]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.7, 0.09999999, -0.6666666)
+
+[node name="DefenseMaskHanger1" type="Node3D" parent="MeshInstance3D" unique_id=967583639]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.7, 0.1, 0)

@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://baq55k7wqwegh"]
+
+[ext_resource type="Script" uid="uid://dkjeqs50xj8wf" path="res://Scenes/Menu/credits.gd" id="1_ynf4x"]
+[ext_resource type="FontFile" uid="uid://0ni8k168pg6u" path="res://Fonts/rogenz-demo/ROGENZ (DEMO).otf" id="2_obosj"]
+[ext_resource type="FontFile" uid="uid://cmkrwrvhg1q1" path="res://Fonts/xirod/Xirod.otf" id="3_k2yj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdrcu"]
+bg_color = Color(0.6392157, 0.05490196, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35riq"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rc2un"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38lf1"]
+bg_color = Color(0.68235296, 0.0627451, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Control" type="Control" unique_id=539617126]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ynf4x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1080064960]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=726364556]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 29.0
+offset_right = 347.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("2_obosj")
+theme_override_font_sizes/font_size = 60
+text = "Developers: "
+
+[node name="Label2" type="Label" parent="." unique_id=1048586992]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = 128.0
+offset_right = -168.0
+offset_bottom = -157.0
+theme_override_fonts/font = ExtResource("2_obosj")
+theme_override_font_sizes/font_size = 46
+text = "• Gabriel
+• Henry
+• Joaquim
+• Richard
+• Rumen"
+
+[node name="return" type="Button" parent="." unique_id=2067737899]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = 172.0
+offset_right = 224.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_k2yj5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdrcu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_35riq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rc2un")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_38lf1")
+text = "Return to Menu"
+
+[connection signal="button_up" from="return" to="." method="_on_return_button_up"]
